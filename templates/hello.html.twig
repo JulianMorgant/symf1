@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ texte }}</h1>
+    <span>{{ title }}</span>
+    {# test du if#}
+    {% if nombre > 0 %}
+        <p> {{ nombre }} est positif</p>
+    {% else %}
+        <p>{{ nombre }} est negatif</p>
+    {% endif %}
+    <br>
+    {# test du for#}
+    {% for i in 0..10 %}
+    <p>{{ i }}</p>
+    {% endfor %}
+    {# test du for each#}
+    {% for key,val in tab %}
+        <p>index : {{ loop.index0}} | {{ key }} --> {{ val }}</p>
+    {% endfor %}
+    <br>
+    {# test de table de multiplication sur nbtest#}
+    <p> Table de multiplication de {{ nbTest }}</p>
+    {% for i in 1..9 %}
+    <p>{{ nbTest }} x {{ i }} = {{ nbTest*i }}</p>
+    {% endfor %}
+    <br>
+</body>
+</html>
